@@ -7,12 +7,12 @@ export default class List extends React.Component {
     this.state = {
       history: {},
     };
-		this.navigate = this.navigate.bind(this);
+    this.navigate = this.navigate.bind(this);
   }
 
   componentDidMount() {
-		this.setState({history: this.props.history});   
-	}
+    this.setState({history: this.props.history});
+  }
 
   navigate(i){
     let target = "details/" + i; 
