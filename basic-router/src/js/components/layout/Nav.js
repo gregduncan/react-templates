@@ -20,7 +20,7 @@ export default class Nav extends React.Component {
     const navClass = collapsed ? "collapse" : "";
 
     return (
-      <nav class="navbar navbar-default" role="navigation">
+      <nav class="navbar navbar-inverse" role="navigation">
         <div class="container">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" onClick={this.toggleCollapse.bind(this)} >

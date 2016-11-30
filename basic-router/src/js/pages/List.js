@@ -2,8 +2,25 @@ import React from "react";
 import Item from "../components/Item";
 
 export default class List extends React.Component {
-  render() {
+  constructor() {
+    super()
+    this.state = {
+      history: {},
+    };
+		this.navigate = this.navigate.bind(this);
+  }
 
+  componentDidMount() {
+		this.setState({history: this.props.history});   
+	}
+
+  navigate(i){
+    let target = "details/" + i; 
+    this.state.history.pushState(null, target);
+  }
+  
+  render() {
+     
      const Items = [
       "Item 1",
       "Item 2",
@@ -15,7 +32,7 @@ export default class List extends React.Component {
       "Item 8",
       "Item 9",
       "Item 10",
-    ].map((title, i) => <Item key={i} title={title} page={i + 1}/> );
+    ].map((title, i) => <Item key={i} title={title} id={i + 1} navigate={this.navigate} /> );
 
     return (
       <div>

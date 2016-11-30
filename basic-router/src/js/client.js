@@ -14,7 +14,7 @@ ReactDOM.render(
     <Route path="/" component={Layout}>
       <IndexRoute component={Home}></IndexRoute>
       <Route path="list" name="list" component={List}></Route>
-      <Route path="details(/:page)" name="details" component={Details}></Route>
+      <Route path="details(/:id)" name="details" component={Details}></Route>
     </Route>
   </Router>,
 app);
