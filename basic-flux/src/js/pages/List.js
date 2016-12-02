@@ -15,12 +15,10 @@ export default class List extends React.Component {
     };
   }
 
-  componentDidMount() {
-    this.setState({history: this.props.history});
-  }
-
   componentWillMount() {
     ItemStore.on("change", this.getItems);
+    this.setState({history: this.props.history});
+    //console.log("count", ItemStore.listenerCount("change"));
   }
 
   componentWillUnmount() {
