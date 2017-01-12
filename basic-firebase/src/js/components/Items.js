@@ -7,7 +7,7 @@ class Items extends React.Component{
       return (
         <li key={index} className="list-group-item">
           <span>
-            {item}
+            {item.name}
           </span>
         </li>
       )

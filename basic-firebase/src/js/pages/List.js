@@ -4,24 +4,24 @@ import Items from "../components/Items";
 import AddItem from "../components/AddItem";
 
 var base = Rebase.createClass({
-    apiKey: "",
-    authDomain: "",
-    databaseURL: "",
-    storageBucket: ""
+    apiKey: "AIzaSyDmadw9bOIAvIo6sHEda2HiroY4zkZRvYs",
+    authDomain: "primedocs-657f7.firebaseapp.com",
+    databaseURL: "https://primedocs-657f7.firebaseio.com",
+    storageBucket: "primedocs-657f7.appspot.com"
 });
 
 export default class List extends React.Component {
+  
   constructor() {
     super()
     this.state = {
-      history: {},
       items: [],
       loading: true
     };
   }
 
   componentDidMount() {
-    this.ref = base.syncState('items', {
+    this.ref = base.syncState('projects/1', {
       context: this,
       state: 'items',
       asArray: true,
@@ -33,14 +33,19 @@ export default class List extends React.Component {
       }
     });
   }
+
   componentWillUnmount(){
     base.removeBinding(this.ref);
   }
+
   handleAddItem(newItem){
+   let item = {id: new Date().getDate(), name: newItem, desc: "" }
+
     this.setState({
-      items: this.state.items.concat([newItem])
+      items: this.state.items.concat([item])
     });
   }
+
   render() {
 
     return (
