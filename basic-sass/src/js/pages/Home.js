@@ -4,7 +4,7 @@ export default class Home extends React.Component {
   render() {
     
     return (
-      <h1>React Router Simple Template</h1>
+      <h1>React SASS Simple Template</h1>
     );
   }
 }

@@ -1,7 +1,6 @@
 import dispatcher from "../dispatcher";
 
 export function reloadItems() {
-    // AJAX REQUEST
     dispatcher.dispatch({type: "RECEIVE_ITEMS", data: [
       {
         id: 8484848484,

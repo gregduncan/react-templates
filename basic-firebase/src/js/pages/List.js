@@ -4,10 +4,10 @@ import Items from "../components/Items";
 import AddItem from "../components/AddItem";
 
 var base = Rebase.createClass({
-    apiKey: "AIzaSyDmadw9bOIAvIo6sHEda2HiroY4zkZRvYs",
-    authDomain: "primedocs-657f7.firebaseapp.com",
-    databaseURL: "https://primedocs-657f7.firebaseio.com",
-    storageBucket: "primedocs-657f7.appspot.com"
+    apiKey: "",
+    authDomain: "",
+    databaseURL: "",
+    storageBucket: ""
 });
 
 export default class List extends React.Component {
