@@ -5,7 +5,8 @@ A collection of basic starter apps for bootstrapping React JS.
 + React with React Router
 + React with SASS
 + React with Flux
-+ react with Google real time database (Firebase)
++ React with Google real time database (Firebase)
++ React with Jest
 
 All applications run in Webpack.
 
